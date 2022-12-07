@@ -174,7 +174,7 @@ func (c *chaosExperiments) DeleteCollection(ctx context.Context,options *v1.Dele
 		VersionedParams(&listOptions, scheme.ParameterCodec).
 		Timeout(timeout).
 		Body(options).
-		Do().
+		Do(ctx).
 		Error()
 }
 
