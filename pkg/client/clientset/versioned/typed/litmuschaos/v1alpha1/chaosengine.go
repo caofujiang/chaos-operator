@@ -37,9 +37,9 @@ type ChaosEnginesGetter interface {
 
 // ChaosEngineInterface has methods to work with ChaosEngine resources.
 type ChaosEngineInterface interface {
-	Create(ctx context.Context,*v1alpha1.ChaosEngine) (*v1alpha1.ChaosEngine, error)
-	Update(ctx context.Context,*v1alpha1.ChaosEngine) (*v1alpha1.ChaosEngine, error)
-	UpdateStatus(ctx context.Context,*v1alpha1.ChaosEngine) (*v1alpha1.ChaosEngine, error)
+	Create( ctx context.Context, chaosEngine *v1alpha1.ChaosEngine) (*v1alpha1.ChaosEngine, error)
+	Update(ctx context.Context, chaosEngine *v1alpha1.ChaosEngine) (*v1alpha1.ChaosEngine, error)
+	UpdateStatus(ctx context.Context, chaosEngine*v1alpha1.ChaosEngine) (*v1alpha1.ChaosEngine, error)
 	Delete(ctx context.Context,name string, options *v1.DeleteOptions) error
 	DeleteCollection(ctx context.Context,options *v1.DeleteOptions, listOptions v1.ListOptions) error
 	Get(ctx context.Context,name string, options v1.GetOptions) (*v1alpha1.ChaosEngine, error)
